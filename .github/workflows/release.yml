@@ -85,4 +85,4 @@ jobs:
     needs: [release]
     uses: ./.github/workflows/publish.yml
     with:
-      should-run: ${{ needs.release.outputs.skipped }}
+      should-run: ${{ needs.release.outputs.skipped == 'false' }}

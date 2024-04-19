@@ -4,11 +4,11 @@ on:
     inputs:
       should-run:
         required: true
-        type: string
+        type: boolean
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'asdotdev/react-list' && inputs.should-run == 'false' }}
+    if: ${{ github.repository == 'asdotdev/react-list' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -18,6 +18,8 @@ jobs:
           cache: "npm"
       - name: install dependencies
         run: npm ci
+      - name: console
+        run: echo ${{ inputs.should-run }}
       - name: build package
         run: npm run build
       - name: publish package
