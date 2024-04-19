@@ -1,25 +1,25 @@
 name: Build
 on:
-    pull_request:
-        branches:
-            - "**"
-            - "!changelog-release-**"
+  pull_request:
+    branches:
+      - "**"
+      - "!changelog-release-**"
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                step: [lint, build]
+    strategy:
+      matrix:
+        step: [lint, build]
 
-        steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-node@v4
-              with:
-                  node-version: "18"
-                  cache: "npm"
-            - name: install dependencies
-              run: npm ci
-            - name: run ${{ matrix.step }}
-              run: npm run ${{ matrix.step }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+      - name: install dependencies
+        run: npm ci
+      - name: run ${{ matrix.step }}
+        run: npm run ${{ matrix.step }}

@@ -1,0 +1,26 @@
+name: Publish
+on:
+  workflow_call:
+    inputs:
+      should-run:
+        required: true
+        type: string
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: ${{ github.repository == 'asdotdev/react-list' && inputs.should-run == 'false' }}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+      - name: install dependencies
+        run: npm ci
+      - name: build package
+        run: npm run build
+      - name: publish package
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,6 +1,14 @@
 {
-    "tabWidth": 4,
-    "semi": true,
-    "doubleQuote": true,
-    "trailingComma": "none"
+  "tabWidth": 2,
+  "semi": true,
+  "doubleQuote": true,
+  "trailingComma": "none",
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.ts"],
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
 }

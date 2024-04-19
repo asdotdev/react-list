@@ -2,11 +2,11 @@
 
 This library provides a scrollable interface for rendering lists in `<FatList />` for the need of section support, use `<SectionList />`, along with features like
 
--   Infinite Scroll
--   Header / Footer
--   Vertical / Horizontal
--   Inverted
--   Sticky
+- Infinite Scroll
+- Header / Footer
+- Vertical / Horizontal
+- Inverted
+- Sticky
 
 ## Before you start!
 
