@@ -64,4 +64,4 @@ Read the [CONTRIBUTING](https://github.com/asdotdev/react-list/blob/master/CONTR
 
 ## License
 
-@asdotdev/react-list is MIT licensed, as found in the [LICENSE](https://github.com/asdotdev/react-list/blob/master/LICENSE) file.
+`@asdotdev/react-list` is MIT licensed, as found in the [LICENSE](https://github.com/asdotdev/react-list/blob/master/LICENSE) file.
