@@ -1,3 +1,12 @@
+## [0.1.26](https://github.com/asdotdev/react-list/compare/v0.1.25...v0.1.26) (2024-04-19)
+
+
+### Bug Fixes
+
+* workflows ([e09e020](https://github.com/asdotdev/react-list/commit/e09e0205fd6c4d9a646691f01bda6270db707b58))
+
+
+
 ## [0.1.25](https://github.com/asdotdev/react-list/compare/v0.1.24...v0.1.25) (2024-04-19)
 
 
