@@ -59,7 +59,7 @@ We use GitHub issues to track bugs and errors. If you run into an issue with the
 
 ## Suggesting Enhancements
 
-This section guides you through submitting an enhancement suggestion for @asdotdev/react-list, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
+This section guides you through submitting an enhancement suggestion for `@asdotdev/react-list`, **including completely new features and minor improvements to existing functionality**. Following these guidelines will help maintainers and the community to understand your suggestion and find related suggestions.
 
 ### Before Submitting an Enhancement
 
@@ -76,7 +76,7 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/asdotd
 - Provide a **step-by-step description of the suggested enhancement** in as many details as possible.
 - **Describe the current behavior** and **explain which behavior you expected to see instead** and why. At this point you can also tell which alternatives do not work for you.
 - You may want to **include screenshots and animated GIFs** which help you demonstrate the steps or point out the part which the suggestion is related to.
-- **Explain why this enhancement would be useful** to most @asdotdev/react-list users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
+- **Explain why this enhancement would be useful** to most `@asdotdev/react-list` users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
 
 ## Setup Development Enviroment
 
@@ -153,7 +153,7 @@ upstream    https://github.com/asdotdev/react-list.git (push)
 
 > the `master` repository is referred to as the upstream repository. Your fork is referred to as the origin repository.
 
-### Running @asdotdev/react-list Locally
+### Running Locally
 
 1. Goto inside react-list directry in your terminal
 
