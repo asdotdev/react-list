@@ -85,4 +85,6 @@ jobs:
     needs: [release]
     uses: ./.github/workflows/publish.yml
     with:
-      should-run: ${{ needs.release.outputs.skipped == 'false' }}
+      should-run: ${{ needs.release.outputs.skipped != 'false' }}
+    secrets:
+      npm-token: ${{ secrets.NPM_TOKEN }}

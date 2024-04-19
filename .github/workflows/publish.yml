@@ -5,10 +5,14 @@ on:
       should-run:
         required: true
         type: boolean
+    secrets:
+      npm-token:
+        required: true
+
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'asdotdev/react-list' }}
+    if: ${{ inputs.should-run }}
 
     steps:
       - uses: actions/checkout@v4
@@ -19,10 +23,10 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: console
-        run: echo ${{ inputs.should-run }}
+        run: echo ${{ inputs.should-run }} ${{ secrets.npm-token }}
       - name: build package
         run: npm run build
       - name: publish package
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.npm-token }}
