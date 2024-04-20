@@ -1,3 +1,12 @@
+## [0.1.28](https://github.com/asdotdev/react-list/compare/v0.1.27...v0.1.28) (2024-04-20)
+
+
+### Bug Fixes
+
+* release.yml ([775c828](https://github.com/asdotdev/react-list/commit/775c82858bc57dd8e515cd8e7f1c11c2f67baf7b))
+
+
+
 ## [0.1.27](https://github.com/asdotdev/react-list/compare/v0.1.26...v0.1.27) (2024-04-20)
 
 
@@ -31,16 +40,6 @@
 ### Bug Fixes
 
 * workflows ([5ccbcb7](https://github.com/asdotdev/react-list/commit/5ccbcb73bc46e05985e029d6f3487aef6a08f47a))
-
-
-
-## [0.1.23](https://github.com/asdotdev/react-list/compare/v0.1.22...v0.1.23) (2024-04-19)
-
-
-### Bug Fixes
-
-* CONTRIBUTING.md ([a7d1e34](https://github.com/asdotdev/react-list/commit/a7d1e347f5833a7d5800748703d813699d2ef16b))
-* workflows and prettierrc ([2f475d5](https://github.com/asdotdev/react-list/commit/2f475d55a9832f0f81ae51224a6871d631786031))
 
 
 
