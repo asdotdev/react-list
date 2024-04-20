@@ -1,3 +1,12 @@
+## [0.1.27](https://github.com/asdotdev/react-list/compare/v0.1.26...v0.1.27) (2024-04-20)
+
+
+### Bug Fixes
+
+* bugs ([96d0f32](https://github.com/asdotdev/react-list/commit/96d0f322cb075122202dd7227809e42336afa66f))
+
+
+
 ## [0.1.26](https://github.com/asdotdev/react-list/compare/v0.1.25...v0.1.26) (2024-04-19)
 
 
@@ -32,15 +41,6 @@
 
 * CONTRIBUTING.md ([a7d1e34](https://github.com/asdotdev/react-list/commit/a7d1e347f5833a7d5800748703d813699d2ef16b))
 * workflows and prettierrc ([2f475d5](https://github.com/asdotdev/react-list/commit/2f475d55a9832f0f81ae51224a6871d631786031))
-
-
-
-## [0.1.22](https://github.com/asdotdev/react-list/compare/965c86c0c59fae28a601fee051fad9ff4ce487d6...v0.1.22) (2024-04-19)
-
-
-### Bug Fixes
-
-* **rollup:** useed rollup bundler ([965c86c](https://github.com/asdotdev/react-list/commit/965c86c0c59fae28a601fee051fad9ff4ce487d6))
 
 
 
