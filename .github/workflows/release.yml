@@ -10,7 +10,7 @@ jobs:
     if: ${{ github.repository == 'asdotdev/react-list' }}
 
     outputs:
-      skipped: ${{ steps.release.outputs.SKIPPED }}
+      released: ${{ steps.release.outputs.RELEASED }}
 
     steps:
       # check out the repository with all releases
@@ -49,7 +49,11 @@ jobs:
       - name: setting release outputs
         id: set-outputs
         run: |
-          echo "SKIPPED=${{steps.changelog.outputs.skipped}}" >> "$GITHUB_OUTPUT"
+          if ${{ steps.changelog.outputs.skipped == 'false' }}; then
+            echo "RELEASED=${{true}}" >> "$GITHUB_OUTPUT"
+          else
+            echo "RELEASED=${{false}}" >> "$GITHUB_OUTPUT"
+          fi
 
       # create PR with release info
       - name: create PR with release info
@@ -81,6 +85,6 @@ jobs:
     needs: [release]
     uses: ./.github/workflows/publish.yml
     with:
-      should-run: ${{ needs.release.outputs.skipped == 'false' }}
+      should-run: ${{ needs.release.outputs.released }}
     secrets:
       npm-token: ${{ secrets.NPM_TOKEN }}
