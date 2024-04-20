@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { getStickOnInset, getInvertedCSS, HIGHER_Z_INDEX } from "../";
+import { getStickOnInset, getInvertedStyle, HIGHER_Z_INDEX } from "../";
 
 export function SectionTitle(props: {
     title: string;
@@ -33,7 +33,7 @@ export function SectionTitle(props: {
         <div
             aria-label="list-section-title"
             style={{
-                ...getInvertedCSS(inverted),
+                ...getInvertedStyle(inverted),
                 ...(stickySectionTitleEnabled && {
                     position: "sticky",
                     ...getStickOnInset("both", horizontal, inverted),

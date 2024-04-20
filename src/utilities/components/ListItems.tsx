@@ -1,21 +1,26 @@
-import React from "react";
+import { CSSProperties, RefObject } from "react";
 import {
     CommonProps,
     ListItemsProps,
     defauldKeyExtractor,
-    getInvertedCSS,
-    getSizeCSS,
-    NO_OF_ITEMS
+    getInvertedStyle,
+    getSizeStyle,
+    NO_OF_ITEMS,
+    ItemProps
 } from "../";
 
 export function ListItems<ItemT>(
     props: {
         data: Array<ItemT>;
+        uListRef?: RefObject<HTMLUListElement>;
+        stickyItemStyle?: (info: ItemProps<ItemT>) => CSSProperties;
     } & ListItemsProps<ItemT> &
         CommonProps
 ) {
     const {
         data,
+        uListRef,
+        stickyItemStyle,
         renderItem,
         keyExtractor,
         noOfItems,
@@ -26,6 +31,7 @@ export function ListItems<ItemT>(
 
     return (
         <ul
+            ref={uListRef}
             style={{
                 display: "grid",
                 gridAutoFlow: horizontal ? "column" : "row",
@@ -44,7 +50,7 @@ export function ListItems<ItemT>(
                       }),
                 listStyleType: "none",
                 gap: gapBetweenItems,
-                ...getSizeCSS(horizontal)
+                ...getSizeStyle(horizontal)
             }}
         >
             {data.map((item: ItemT, index: number) => (
@@ -55,8 +61,9 @@ export function ListItems<ItemT>(
                             : defauldKeyExtractor(item as object, index, "item")
                     }
                     style={{
-                        ...getSizeCSS(horizontal),
-                        ...getInvertedCSS(inverted)
+                        ...getSizeStyle(horizontal),
+                        ...getInvertedStyle(inverted),
+                        ...(stickyItemStyle && stickyItemStyle({ item, index }))
                     }}
                 >
                     {renderItem({ item, index })}

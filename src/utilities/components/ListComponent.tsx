@@ -1,5 +1,5 @@
 import { ReactElement, ReactNode } from "react";
-import { getInvertedCSS, getStickOnInset, HIGHER_Z_INDEX } from "../";
+import { getInvertedStyle, getStickOnInset, HIGHER_Z_INDEX } from "../";
 
 export function ListComponent(props: {
     Component?: ReactElement | ReactNode;
@@ -14,7 +14,7 @@ export function ListComponent(props: {
         <div
             aria-label={`"list-${name}"`}
             style={{
-                ...getInvertedCSS(inverted),
+                ...getInvertedStyle(inverted),
                 ...(isSticky && {
                     position: "sticky",
                     zIndex: HIGHER_Z_INDEX,

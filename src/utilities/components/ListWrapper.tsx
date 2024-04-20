@@ -4,19 +4,22 @@ import {
     ListWrapperProps,
     ListComponent,
     EndElement,
-    getListWrapperStyle,
-    getInvertedCSS,
+    getListContentContainerStyle,
+    getInvertedStyle,
     HIDE_SCROLLBAR
 } from "../";
+import ListEmpty from "./ListEmpty";
 
 export function ListWrapper(
     props: ListWrapperProps &
         CommonProps & {
             children: ReactNode;
-            itemsContainerRef: RefObject<HTMLDivElement>;
+            uListRef?: RefObject<HTMLUListElement>;
             isEmpty?: boolean;
         }
 ) {
+    const containerRef = useRef<HTMLDivElement>(null);
+
     const {
         children,
         horizontal,
@@ -37,17 +40,17 @@ export function ListWrapper(
         ListSkeletonComponent,
         stickyListHeaderEnabled,
         stickyListFooterEnabled,
-        itemsContainerRef,
+        uListRef,
         isEmpty
     } = props;
 
-    const ListWrapperCSS: CSSProperties = {
+    const ListContainerStyle: CSSProperties = {
         background,
         overflow: isEmpty && loading ? "hidden" : "scroll",
         position: "relative",
         width: width || "100%",
         height: height || "100%",
-        ...getInvertedCSS(inverted)
+        ...getInvertedStyle(inverted)
     };
 
     if (!width || !height) {
@@ -56,46 +59,48 @@ export function ListWrapper(
         );
     }
 
-    const containerRef = useRef<HTMLDivElement>(null);
-
     useEffect(() => {
         if (
+            !isEmpty &&
             intialScrollIndex &&
             containerRef.current &&
-            itemsContainerRef.current?.firstElementChild
+            uListRef?.current?.children &&
+            uListRef.current.children[intialScrollIndex]
         ) {
-            const targetElement = itemsContainerRef.current.firstElementChild
-                .children[intialScrollIndex] as HTMLElement;
+            const targetElement = uListRef.current.children[
+                intialScrollIndex
+            ] as HTMLLIElement;
 
+            console.warn(
+                horizontal ? targetElement.offsetLeft : 0,
+                horizontal ? 0 : targetElement.offsetTop
+            );
             containerRef.current.scrollTo(
                 horizontal ? targetElement.offsetLeft : 0,
                 horizontal ? 0 : targetElement.offsetTop
             );
         }
-    }, [
-        containerRef,
-        itemsContainerRef,
-        intialScrollIndex,
-        horizontal,
-        inverted
-    ]);
+    }, [containerRef, uListRef, intialScrollIndex, horizontal, isEmpty]);
 
     return (
         <div
             ref={containerRef}
-            style={ListWrapperCSS}
+            style={ListContainerStyle}
             aria-label="list-container"
             className="scrollable"
         >
             {hideScrollabar && <style>{HIDE_SCROLLBAR}</style>}
-            {isEmpty && loading && ListSkeletonComponent ? (
-                ListSkeletonComponent
-            ) : isEmpty && ListEmptyComponent ? (
-                ListEmptyComponent
+            {isEmpty ? (
+                <ListEmpty
+                    ListSkeletonComponent={ListSkeletonComponent}
+                    ListEmptyComponent={ListEmptyComponent}
+                    inverted={inverted}
+                    loading={loading}
+                />
             ) : (
                 <div
                     aria-label="list-content-container"
-                    style={getListWrapperStyle(horizontal)}
+                    style={getListContentContainerStyle(horizontal)}
                 >
                     <ListComponent
                         name="header"

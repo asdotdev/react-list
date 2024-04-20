@@ -1,7 +1,7 @@
 import { ReactElement, ReactNode, RefObject, useEffect, useRef } from "react";
 import {
     getThresholdMargin,
-    getInvertedCSS,
+    getInvertedStyle,
     END_ELEMENT_SIZE,
     END_ELEMENT_BUFFER
 } from "../";
@@ -81,7 +81,7 @@ export function EndElement(props: EndReachedProps) {
         <div
             style={{
                 pointerEvents: "none",
-                ...getInvertedCSS(inverted)
+                ...getInvertedStyle(inverted)
             }}
             ref={targetRef}
             aria-hidden

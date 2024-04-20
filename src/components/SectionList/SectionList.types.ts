@@ -11,8 +11,8 @@ export type SectionProps<ItemT> = SectionT<ItemT> & {
     index: number;
 };
 
-export interface SectionListProps<ItemT> extends ListProps<ItemT> {
+export type SectionListProps<ItemT> = ListProps<ItemT> & {
     data: Array<SectionT<ItemT>>;
     coustomSectionTitle?: (info: SectionProps<ItemT>) => ReactNode;
     stickySectionTitleEnabled?: boolean;
-}
+};

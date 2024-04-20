@@ -125,11 +125,11 @@ export function getStickOnInset(
     return inset;
 }
 
-export function getInvertedCSS(inverted?: boolean): CSSProperties {
+export function getInvertedStyle(inverted?: boolean): CSSProperties {
     return inverted ? { transform: "scale(-1)" } : {};
 }
 
-export function getSizeCSS(horizontal?: boolean): CSSProperties {
+export function getSizeStyle(horizontal?: boolean): CSSProperties {
     return horizontal
         ? {
               height: "100%"
@@ -139,10 +139,12 @@ export function getSizeCSS(horizontal?: boolean): CSSProperties {
           };
 }
 
-export function getListWrapperStyle(horizontal?: boolean): CSSProperties {
+export function getListContentContainerStyle(
+    horizontal?: boolean
+): CSSProperties {
     return {
         display: "flex",
         flexDirection: horizontal ? "row" : "column",
-        ...getSizeCSS(horizontal)
+        ...getSizeStyle(horizontal)
     };
 }

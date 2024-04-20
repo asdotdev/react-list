@@ -1,9 +1,14 @@
-import { useEffect, useRef } from "react";
+import { CSSProperties, useRef } from "react";
 import { FlatListProps } from "./FlatList.types";
-import { ListWrapper, ListItems, getStickOnInset } from "../../utilities";
+import {
+    ListWrapper,
+    ListItems,
+    getStickOnInset,
+    ItemProps
+} from "../../utilities";
 
 export default function FlatList<ItemT>(props: FlatListProps<ItemT>) {
-    const itemsContainerRef = useRef<HTMLDivElement>(null);
+    const uListRef = useRef<HTMLUListElement>(null);
 
     const {
         data,
@@ -33,10 +38,26 @@ export default function FlatList<ItemT>(props: FlatListProps<ItemT>) {
         stickItemsAt
     } = props;
 
+    function stickyItemStyle({ index }: ItemProps<ItemT>): CSSProperties {
+        return stickyItemsIndices?.includes(index)
+            ? {
+                  position: "sticky",
+                  ...getStickOnInset(
+                      stickItemsAt || "start",
+                      horizontal,
+                      inverted
+                  ),
+                  zIndex: index
+              }
+            : {};
+    }
+
     const listItemsProps = {
         data,
+        uListRef,
         renderItem,
         keyExtractor,
+        stickyItemStyle,
         noOfItems,
         horizontal,
         inverted,
@@ -64,54 +85,12 @@ export default function FlatList<ItemT>(props: FlatListProps<ItemT>) {
         isEmpty: !data.length,
         stickyListHeaderEnabled,
         stickyListFooterEnabled,
-        itemsContainerRef
+        uListRef
     };
-
-    useEffect(() => {
-        if (stickyItemsIndices) {
-            const targetElements: Array<{
-                indice: number;
-                element: HTMLElement;
-            }> = [];
-
-            stickyItemsIndices.forEach((indice) => {
-                if (itemsContainerRef.current?.firstElementChild) {
-                    targetElements.push({
-                        indice,
-                        element: itemsContainerRef.current.firstElementChild
-                            .children[indice] as HTMLElement
-                    });
-                }
-            });
-
-            const stickyInset = getStickOnInset(
-                stickItemsAt || "start",
-                horizontal,
-                inverted
-            );
-
-            targetElements.forEach(({ indice, element }) => {
-                element.style.position = "sticky";
-                element.style.left = stickyInset.left;
-                element.style.top = stickyInset.top;
-                element.style.right = stickyInset.right;
-                element.style.bottom = stickyInset.bottom;
-                element.style.zIndex = `${indice}`;
-            });
-        }
-    }, [
-        itemsContainerRef,
-        stickyItemsIndices,
-        stickItemsAt,
-        horizontal,
-        inverted
-    ]);
 
     return (
         <ListWrapper {...listWrapperProps}>
-            <div aria-label="list-items-container" ref={itemsContainerRef}>
-                <ListItems {...listItemsProps} />
-            </div>
+            <ListItems {...listItemsProps} />
         </ListWrapper>
     );
 }

@@ -1,15 +1,15 @@
 import { useRef } from "react";
 import { SectionListProps } from "./SectionList.types";
 import {
-    ListWrapper,
     ListItems,
+    ListWrapper,
     SectionTitle,
     defauldKeyExtractor,
-    getListWrapperStyle
+    getListContentContainerStyle
 } from "../../utilities";
 
 export default function SectionList<ItemT>(props: SectionListProps<ItemT>) {
-    const itemsContainerRef = useRef<HTMLDivElement>(null);
+    const uListRef = useRef<HTMLUListElement>(null);
 
     const {
         data: sections,
@@ -69,22 +69,20 @@ export default function SectionList<ItemT>(props: SectionListProps<ItemT>) {
         isEmpty: !sections.length,
         stickyListHeaderEnabled,
         stickyListFooterEnabled,
-        itemsContainerRef
+        uListRef
     };
 
-    const listWrapperStyle = getListWrapperStyle(horizontal);
+    const listWrapperStyle = getListContentContainerStyle(horizontal);
 
     return (
         <ListWrapper {...listWrapperProps}>
-            <div
-                aria-label="list-items-container"
-                ref={itemsContainerRef}
-                style={listWrapperStyle}
+            <ul
+                ref={uListRef}
+                style={{ ...listWrapperStyle, listStyleType: "none" }}
             >
                 {sections.map((section, index) => (
-                    <div
+                    <li
                         key={defauldKeyExtractor(section, index, "section")}
-                        aria-label="list-section"
                         style={listWrapperStyle}
                         className="sections"
                     >
@@ -101,9 +99,9 @@ export default function SectionList<ItemT>(props: SectionListProps<ItemT>) {
                             }
                         />
                         <ListItems data={section.data} {...listItemsProps} />
-                    </div>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </ListWrapper>
     );
 }
