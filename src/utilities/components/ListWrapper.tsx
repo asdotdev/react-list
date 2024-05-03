@@ -1,4 +1,4 @@
-import { CSSProperties, ReactNode, RefObject, useEffect, useRef } from "react";
+import { CSSProperties, ReactNode, RefObject, useRef } from "react";
 import {
     CommonProps,
     ListWrapperProps,
@@ -18,6 +18,7 @@ export function ListWrapper(
             isEmpty?: boolean;
         }
 ) {
+    const isInitialLoad = useRef<boolean>(true);
     const containerRef = useRef<HTMLDivElement>(null);
 
     const {
@@ -32,7 +33,7 @@ export function ListWrapper(
         height,
         inverted,
         background,
-        intialScrollIndex,
+        initialScrollIndex,
         ListEmptyComponent,
         ListHeaderComponent,
         ListFooterComponent,
@@ -59,28 +60,32 @@ export function ListWrapper(
         );
     }
 
-    useEffect(() => {
-        if (
-            !isEmpty &&
-            intialScrollIndex &&
-            containerRef.current &&
-            uListRef?.current?.children &&
-            uListRef.current.children[intialScrollIndex]
-        ) {
-            const targetElement = uListRef.current.children[
-                intialScrollIndex
-            ] as HTMLLIElement;
+    function onInitialLoad() {
+        if (isInitialLoad.current) {
+            if (
+                !loading &&
+                !isEmpty &&
+                initialScrollIndex &&
+                uListRef?.current?.children &&
+                uListRef.current.children[initialScrollIndex]
+            ) {
+                const targetElement = uListRef.current.children[
+                    initialScrollIndex
+                ] as HTMLLIElement;
 
-            console.warn(
-                horizontal ? targetElement.offsetLeft : 0,
-                horizontal ? 0 : targetElement.offsetTop
-            );
-            containerRef.current.scrollTo(
-                horizontal ? targetElement.offsetLeft : 0,
-                horizontal ? 0 : targetElement.offsetTop
-            );
+                containerRef.current &&
+                    containerRef.current.scrollTo(
+                        horizontal ? targetElement.offsetLeft : 0,
+                        horizontal ? 0 : targetElement.offsetTop
+                    );
+            } else {
+                console.warn(
+                    `Provided prop "initialScrollIndex" is out of bound on initial load.`
+                );
+            }
+            isInitialLoad.current = false;
         }
-    }, [containerRef, uListRef, intialScrollIndex, horizontal, isEmpty]);
+    }
 
     return (
         <div
@@ -88,6 +93,7 @@ export function ListWrapper(
             style={ListContainerStyle}
             aria-label="list-container"
             className="scrollable"
+            onLoad={onInitialLoad}
         >
             {hideScrollabar && <style>{HIDE_SCROLLBAR}</style>}
             {isEmpty ? (

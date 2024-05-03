@@ -28,7 +28,7 @@ export type ListWrapperProps = {
     ListEmptyComponent?: ReactElement | ReactNode;
     stickyListHeaderEnabled?: boolean;
     stickyListFooterEnabled?: boolean;
-    intialScrollIndex?: number;
+    initialScrollIndex?: number;
 };
 
 export type CommonProps = {

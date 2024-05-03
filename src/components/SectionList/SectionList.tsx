@@ -27,7 +27,7 @@ export default function SectionList<ItemT>(props: SectionListProps<ItemT>) {
         width,
         height,
         background,
-        intialScrollIndex,
+        initialScrollIndex,
         ListEmptyComponent,
         ListHeaderComponent,
         ListFooterComponent,
@@ -60,7 +60,7 @@ export default function SectionList<ItemT>(props: SectionListProps<ItemT>) {
         width,
         height,
         background,
-        intialScrollIndex,
+        initialScrollIndex,
         ListEmptyComponent,
         ListHeaderComponent,
         ListFooterComponent,
@@ -84,7 +84,6 @@ export default function SectionList<ItemT>(props: SectionListProps<ItemT>) {
                     <li
                         key={defauldKeyExtractor(section, index, "section")}
                         style={listWrapperStyle}
-                        className="sections"
                     >
                         <SectionTitle
                             title={section.title}

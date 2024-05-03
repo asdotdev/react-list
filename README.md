@@ -40,7 +40,7 @@ _Note: Asterisk (\*) in props column represent required field._
 | height | `CCSSProperties["height"]` || Height of the list | undefined |
 | background | `CCSSProperties["background"]` || Background of the list| undefined |
 | gapBetweenItems | `CCSSProperties["gap"]` || Space between the items on the list | undefined |
-| intialScrollIndex | `number` || Scroll to the item (section in SectionList) at the index | undefined |
+| initialScrollIndex | `number` || Scroll to the item (section in SectionList) at the index | undefined |
 | onEndReached | `function` || Function to execute on reaching the end of the list | undefined |
 | onEndReachedIgnored | `boolean` || Ignore observing whether the end of the list is reached or not | false |
 | onEndReachedThreshold | `number` || Run onEndReached before reaching the end of the list (0 - 1) | 0 |
