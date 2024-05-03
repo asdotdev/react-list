@@ -1,3 +1,12 @@
+## [0.1.31](https://github.com/asdotdev/react-list/compare/v0.1.30...v0.1.31) (2024-05-03)
+
+
+### Bug Fixes
+
+* initialScrollIndex ([833471c](https://github.com/asdotdev/react-list/commit/833471c36b8463c495225fab4641f0131ba40287))
+
+
+
 ## [0.1.30](https://github.com/asdotdev/react-list/compare/v0.1.29...v0.1.30) (2024-04-21)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * bugs ([96d0f32](https://github.com/asdotdev/react-list/commit/96d0f322cb075122202dd7227809e42336afa66f))
-
-
-
-## [0.1.26](https://github.com/asdotdev/react-list/compare/v0.1.25...v0.1.26) (2024-04-19)
-
-
-### Bug Fixes
-
-* workflows ([e09e020](https://github.com/asdotdev/react-list/commit/e09e0205fd6c4d9a646691f01bda6270db707b58))
 
 
 
