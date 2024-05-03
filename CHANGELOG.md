@@ -1,3 +1,12 @@
+## [0.1.30](https://github.com/asdotdev/react-list/compare/v0.1.29...v0.1.30) (2024-04-21)
+
+
+### Bug Fixes
+
+* release.yml ([477c02d](https://github.com/asdotdev/react-list/commit/477c02df230e64b1f41399f9e74377f6d69a816f))
+
+
+
 ## [0.1.29](https://github.com/asdotdev/react-list/compare/v0.1.28...v0.1.29) (2024-04-20)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * workflows ([e09e020](https://github.com/asdotdev/react-list/commit/e09e0205fd6c4d9a646691f01bda6270db707b58))
-
-
-
-## [0.1.25](https://github.com/asdotdev/react-list/compare/v0.1.24...v0.1.25) (2024-04-19)
-
-
-### Bug Fixes
-
-* workflows ([2ab609c](https://github.com/asdotdev/react-list/commit/2ab609c803a48514787553c960323c59c1425b7d))
 
 
 
