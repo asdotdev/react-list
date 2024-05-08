@@ -161,8 +161,6 @@ upstream    https://github.com/asdotdev/react-list.git (push)
 
 3. Build the library with `npm run build`
 
-   Chek for lint with `npm run lint`
-
 4. Create a global symbolic link for the library with `npm link`
 
 5. Now goto inside the react project directry where you want to use react-ist in your terminal
@@ -239,9 +237,13 @@ npm link @asdotdev/react-list
 
 5.  Edit pages and work on code in your favorite text editor.
 
-6.  Once you are happy with the changes you should optionally run react-list to preview the changes.
+6.  Once you are happy with the changes and your final preview of the changes.
 
-7.  Make sure you fix any errors and check the formatting of your changes.
+7.  Make sure your changes don't have any errors, and also check the formatting of your changes.
+
+    Lint -> `npm run lint:check` & `npm run lint:fix`
+
+    Prettier -> `npm run format:check` & `npm run format:fix`
 
 8.  Check and confirm the files you are updating with `git status`
 

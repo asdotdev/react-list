@@ -18,12 +18,11 @@
     "sectionlist"
   ],
   "scripts": {
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "rollup -c --bundleConfigAsCjs",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
     "format:check": "prettier --check .",
-    "format:write": "prettier --write ."
+    "format:fix": "prettier --write ."
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
