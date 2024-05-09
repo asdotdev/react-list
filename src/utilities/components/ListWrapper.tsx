@@ -61,14 +61,14 @@ export function ListWrapper(
     }
 
     function onInitialLoad() {
-        if (isInitialLoad.current) {
-            if (
-                !loading &&
-                !isEmpty &&
-                initialScrollIndex &&
-                uListRef?.current?.children &&
-                uListRef.current.children[initialScrollIndex]
-            ) {
+        if (
+            !loading &&
+            !isEmpty &&
+            initialScrollIndex &&
+            isInitialLoad.current &&
+            uListRef?.current?.children
+        ) {
+            if (uListRef.current.children[initialScrollIndex]) {
                 const targetElement = uListRef.current.children[
                     initialScrollIndex
                 ] as HTMLLIElement;
