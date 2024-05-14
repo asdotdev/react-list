@@ -15,7 +15,8 @@
     "infinite-list",
     "infinite-scroll",
     "flatlist",
-    "sectionlist"
+    "sectionlist",
+    "scrollable"
   ],
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",

@@ -7,8 +7,8 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > And if you like the project, but just don't have time to contribute, that's fine. There are other easy ways to support the project and show your appreciation, which we would also be very happy about:
 >
 > - Star the project
-> - Tweet about it
-> - Refer this project in your project's readme
+> - Share about it
+> - Refer this project in your project's README
 > - Mention the project at local meetups and tell your friends/colleagues
 
 ## Table of Contents
@@ -22,7 +22,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 
 ## Have a Question
 
-> If you want to ask a question, we assume that you have read the available [Documentation](https://github.com/asdotdev/react-list/blob/master/README.md).
+> If you want to ask a question, we assume that you have read the available [README](https://github.com/asdotdev/react-list/blob/master/README.md).
 
 Before you ask a question, it is best to search for existing [Issues](https://github.com/asdotdev/react-list/issues) that might help you. In case you have found a suitable issue and still need clarification, you can write your question in this issue. It is also advisable to search the internet for answers first.
 
@@ -41,8 +41,8 @@ We will then take care of the issue as soon as possible.
 A good bug report shouldn't leave others needing to chase you up for more information. Therefore, we ask you to investigate carefully, collect information and describe the issue in detail in your report. Please complete the following steps in advance to help us fix any potential bug as fast as possible.
 
 - Make sure that you are using the latest version.
-- Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the [documentation](https://github.com/asdotdev/react-list/blob/master/README.md)).
-- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [bug tracker](https://github.com/asdotdev/react-list/issues).
+- Determine if your bug is really a bug and not an error on your side e.g. using incompatible environment components/versions (Make sure that you have read the [README](https://github.com/asdotdev/react-list/blob/master/README.md)).
+- To see if other users have experienced (and potentially already solved) the same issue you are having, check if there is not already a bug report existing for your bug or error in the [issues](https://github.com/asdotdev/react-list/issues) section.
 - Collect information about the bug:
   - Device, OS, Browser and Version
   - Possibly your input and the output
@@ -54,7 +54,7 @@ We use GitHub issues to track bugs and errors. If you run into an issue with the
 
 - Open an [Issue](https://github.com/asdotdev/react-list/issues/new). (Since we can't be sure at this point whether it is a bug or not, we ask you not to talk about a bug yet and not to label the issue.)
 - Explain the behavior you would expect and the actual behavior.
-- Please provide as much context as possible and describe the _reproduction steps_ that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
+- Please provide as much context as possible and describe the **reproduction steps** that someone else can follow to recreate the issue on their own. This usually includes your code. For good bug reports you should isolate the problem and create a reduced test case.
 - Provide the information you collected in the previous section.
 
 ## Suggesting Enhancements
@@ -64,8 +64,8 @@ This section guides you through submitting an enhancement suggestion for `@asdot
 ### Before Submitting an Enhancement
 
 - Make sure that you are using the latest version.
-- Read the [documentation](https://github.com/asdotdev/react-list/blob/master/README.md) carefully and find out if the functionality is already covered, maybe by an individual configuration.
-- Perform a [search](https://github.com/asdotdev/react-list/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
+- Read the [README](https://github.com/asdotdev/react-list/blob/master/README.md) carefully and find out if the functionality is already covered, maybe by an individual configuration.
+- Perform a search in the [issues](https://github.com/asdotdev/react-list/issues) to see if the enhancement has already been suggested. If it has, add a comment to the existing issue instead of opening a new one.
 - Find out whether your idea fits with the scope and aims of the project. It's up to you to make a strong case to convince the project's developers of the merits of this feature. Keep in mind that we want features that will be useful to the majority of our users and not just a small subset. If you're just targeting a minority of users, consider writing an add-on/plugin library.
 
 ### How Do I Submit a Good Enhancement Suggestion?
@@ -82,25 +82,22 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/asdotd
 
 ### Prerequisites
 
-- [NodeJs](https://nodejs.org/en/download/) (Works with Node LTS version v18.18.0)
-- NPM
-  If Node.js is already installed on your machine, run the following commands to validate the versions:
+Check if [Node.js](https://nodejs.org/en/download/) is already installed on your machine, run the following commands to validate the versions:
 
 ```
 node -v
 npm -v
 ```
 
+Make sure you are using `v18.x.x` or above. Else install [Node.js](https://nodejs.org/en/download/).
+
 Once you have the prerequisites installed, you need to prepare your development environment. This is common for many development workflows, and you will only need to do this once.
-Follow these steps to get your development environment ready:
 
-    Install [Git](https://git-scm.com/) or your favorite Git client, if you haven't already. Update to the latest version; the version that came bundled with your OS may be outdated.
+> Install [Git](https://git-scm.com/) or your favorite Git client, if you haven't already. Update to the latest version; the version that came bundled with your OS may be outdated.
+>
+> (Optional but recommended) [Set up an SSH Key](https://help.github.com/articles/generating-an-ssh-key/) for GitHub.
 
-    (Optional but recommended) [Set up an SSH Key](https://help.github.com/articles/generating-an-ssh-key/) for GitHub.
-
-    Install a code editor of your choice. If you aren't sure which one to use, we recommend [VSCode](https://code.visualstudio.com/) — it's free and open source.
-
-    Set up linting for your code editor.
+> Install a code editor of your choice. If you aren't sure which one to use, try [VSCode](https://code.visualstudio.com/) — it's most recommend IDE developed by Microsoft which is free, essy to use and open source.
 
 ### Fork the Repository on GitHub
 
@@ -151,7 +148,7 @@ upstream    https://github.com/asdotdev/react-list.git (fetch)
 upstream    https://github.com/asdotdev/react-list.git (push)
 ```
 
-> the `master` repository is referred to as the upstream repository. Your fork is referred to as the origin repository.
+> the main repository is referred to as the upstream repository. Your fork is referred to as the origin repository.
 
 ### Running Locally
 
@@ -175,12 +172,13 @@ npm ci
 npm run build
 npm link
 
-cd ~/projects/my-app
-npm link some-dep
+cd ~/projects/react-list-test-app
 npm link @asdotdev/react-list
 ```
 
-> You only have to `link` once but every time you make changes to the library you have to rebuild with `npm run build`. Once you are done with changes you can `unlink` with `npm unlink` and `npm unlink @asdotdev/react-list` at the respective directory.
+> You only have to `link` once but every time you make changes to the library you have to rebuild with `npm run build`.
+>
+> Once you are done with changes you can `unlink` with `npm unlink` and `npm unlink @asdotdev/react-list` at the respective directory.
 
 ## Contributing to the Codebase
 
@@ -260,8 +258,9 @@ npm link @asdotdev/react-list
     git add <file1> <file2> <file3> ...
     ```
 
-    > - **Only commit the `package-lock.json` file if you've made changes to the `package.json` file.**
-    > - **The `CHANGELOG.md` and `config/app.json` files are auto-generated, so don't make changes or commit them.**
+    > Only commit the `packag-lock.json` file if you've made changes to the `package.json` file.
+    >
+    > The `CHANGELOG.md` an`config/app.json` files are auto-generated, so don't make changes or commit them.
 
 10. Now, you can commit your changes with a short message like this `<type>([optional scope]): <description>`:
 

@@ -46,7 +46,7 @@ _Note: Asterisk (\*) in props column represent required field._
 | onEndReachedThreshold | `number` || Run onEndReached before reaching the end of the list (0 - 1) | 0 |
 | noOfItems | `number` || Number of items in each row (column when horizontal) | 1 |
 | loading | `boolean` || Prevent calling onEndReached until the last call is completed and show the end loader component | false |
-| ListLoadingComponent | `ReactElement \| ReactNode` || Component to appear at the end of the list while loading is true | undefined |
+| ListLoadingComponent | `ReactElement \| ReactNode` || Component to appear at the end of the list while loading | undefined |
 | ListHeaderComponent | `ReactElement \| ReactNode` || Component to appear at the start of the list | undefined |
 | ListFooterComponent | `ReactElement \| ReactNode` || Component to appear at the end of the list | undefined |
 | ListEmptyComponent | `ReactElement \| ReactNode` || Component to appear when data has no element | undefined |
@@ -60,7 +60,7 @@ _Note: Asterisk (\*) in props column represent required field._
 
 ## Contributing Guide
 
-Read the [CONTRIBUTING](https://github.com/asdotdev/react-list/blob/master/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements.
+Read the [CONTRIBUTING](https://github.com/asdotdev/react-list/blob/master/CONTRIBUTING.md) file to learn about our development process, how to propose bugfixes and improvements.
 
 ## License
 

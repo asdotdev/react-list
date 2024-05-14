@@ -2,4 +2,3 @@ node_modules
 dist
 CHANGELOG.md
 config/app.json
-package-lock.json
