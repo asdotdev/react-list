@@ -1,10 +1,11 @@
-## 1.0.0 (2024-05-19)
+## 1.0.1 (2024-05-19)
 
 
 ### Bug Fixes
 
 * bugs ([96d0f32](https://github.com/asdotdev/react-list/commit/96d0f322cb075122202dd7227809e42336afa66f))
 * CONTRIBUTING.md ([a7d1e34](https://github.com/asdotdev/react-list/commit/a7d1e347f5833a7d5800748703d813699d2ef16b))
+* fix ([7ac79af](https://github.com/asdotdev/react-list/commit/7ac79af15d245df7fb0bd63de502135015bb5f28))
 * fix ([70a4321](https://github.com/asdotdev/react-list/commit/70a43215cca7a2742cada40ea3915b79f0e1bf0c))
 * fix ([3122ebd](https://github.com/asdotdev/react-list/commit/3122ebd821de1e71553a34f0baad436c66798782))
 * initialScrollIndex ([0e9dd40](https://github.com/asdotdev/react-list/commit/0e9dd4044cd5120b18c26104918e775f0f7ae7c6))
