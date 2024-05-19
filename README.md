@@ -45,7 +45,7 @@ _Note: Asterisk (\*) in props column represent required field._
 | onEndReachedIgnored | `boolean` || Ignore observing whether the end of the list is reached or not | false |
 | onEndReachedThreshold | `number` || Run onEndReached before reaching the end of the list (0 - 1) | 0 |
 | noOfItems | `number` || Number of items in each row (column when horizontal) | 1 |
-| loading | `boolean` || Prevent calling onEndReached until the last call is completed and show the end loader component | false |
+| loading | `boolean` || Prevent calling onEndReached until the last call is completed and show the end loader component | undefined |
 | ListLoadingComponent | `ReactElement \| ReactNode` || Component to appear at the end of the list while loading | undefined |
 | ListHeaderComponent | `ReactElement \| ReactNode` || Component to appear at the start of the list | undefined |
 | ListFooterComponent | `ReactElement \| ReactNode` || Component to appear at the end of the list | undefined |
