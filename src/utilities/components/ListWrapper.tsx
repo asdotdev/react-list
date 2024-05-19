@@ -6,7 +6,8 @@ import {
     EndElement,
     getListContentContainerStyle,
     getInvertedStyle,
-    HIDE_SCROLLBAR
+    HIDE_SCROLLBAR,
+    LIST_SIZE
 } from "../";
 import ListEmpty from "./ListEmpty";
 
@@ -49,8 +50,8 @@ export function ListWrapper(
         background,
         overflow: isEmpty && loading ? "hidden" : "scroll",
         position: "relative",
-        width: width || "100%",
-        height: height || "100%",
+        width: width || LIST_SIZE,
+        height: height || LIST_SIZE,
         ...getInvertedStyle(inverted)
     };
 

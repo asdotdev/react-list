@@ -1,5 +1,6 @@
 import { CSSProperties, RefObject } from "react";
 import { StickOnProps } from "../components/FlatList/FlatList.types";
+import { LIST_SIZE } from "./constants";
 
 export function defauldKeyExtractor(
     item: object | string | number | boolean,
@@ -132,10 +133,10 @@ export function getInvertedStyle(inverted?: boolean): CSSProperties {
 export function getSizeStyle(horizontal?: boolean): CSSProperties {
     return horizontal
         ? {
-              height: "100%"
+              height: LIST_SIZE
           }
         : {
-              width: "100%"
+              width: LIST_SIZE
           };
 }
 

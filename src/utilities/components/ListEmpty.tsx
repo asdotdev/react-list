@@ -1,5 +1,6 @@
 import { ReactElement, ReactNode } from "react";
 import { getInvertedStyle } from "../utils";
+import { LIST_SIZE } from "../constants";
 
 export default function ListEmpty(props: {
     ListSkeletonComponent?: ReactElement | ReactNode;
@@ -14,8 +15,8 @@ export default function ListEmpty(props: {
         <div
             aria-label="list-empty-container"
             style={{
-                width: "100%",
-                height: "100%",
+                width: LIST_SIZE,
+                height: LIST_SIZE,
                 ...getInvertedStyle(inverted)
             }}
         >

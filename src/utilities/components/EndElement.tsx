@@ -3,7 +3,8 @@ import {
     getThresholdMargin,
     getInvertedStyle,
     END_ELEMENT_SIZE,
-    END_ELEMENT_BUFFER
+    END_ELEMENT_BUFFER,
+    LIST_SIZE
 } from "../";
 
 type EndReachedProps = {
@@ -91,8 +92,8 @@ export function EndElement(props: EndReachedProps) {
             ) : (
                 <div
                     style={{
-                        width: horizontal ? END_ELEMENT_SIZE : "100%",
-                        height: horizontal ? "100%" : END_ELEMENT_SIZE
+                        width: horizontal ? END_ELEMENT_SIZE : LIST_SIZE,
+                        height: horizontal ? LIST_SIZE : END_ELEMENT_SIZE
                     }}
                 />
             )}
