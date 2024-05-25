@@ -1,4 +1,16 @@
-## 0.5.30 (2024-05-25)
+# [1.0.0](https://github.com/asdotdev/react-list/compare/v0.5.30...v1.0.0) (2024-05-25)
+
+
+* chore!: drop Node 6 from testing matrix ([9dd717c](https://github.com/asdotdev/react-list/commit/9dd717c6162603aa782e116395d141ed065b0423))
+
+
+### BREAKING CHANGES
+
+* dropping Node 6 which hits end of life in April
+
+
+
+## [0.5.30](https://github.com/asdotdev/react-list/compare/965c86c0c59fae28a601fee051fad9ff4ce487d6...v0.5.30) (2024-05-25)
 
 
 ### Bug Fixes
