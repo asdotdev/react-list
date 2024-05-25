@@ -1,4 +1,4 @@
-# @asdotdev/react-list test text
+# @asdotdev/react-list
 
 This library provides a scrollable interface for rendering lists in `<FatList />` for the need of section support, use `<SectionList />`, along with features like
 
