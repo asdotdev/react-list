@@ -1,7 +1,7 @@
 {
   "name": "@asdotdev/react-list",
   "description": "This library provides a scrollable interface for rendering infinite lists. test text",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "private": false,
   "license": "MIT",
   "main": "dist/cjs/index.js",
