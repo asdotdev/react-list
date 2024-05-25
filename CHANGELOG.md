@@ -1,3 +1,12 @@
+## [0.5.17](https://github.com/asdotdev/react-list/compare/v0.5.16...v0.5.17) (2024-05-25)
+
+
+### Bug Fixes
+
+* test ([fd3e73a](https://github.com/asdotdev/react-list/commit/fd3e73adb71dbb67cacda3ef869afa7653d35b75))
+
+
+
 ## [0.5.16](https://github.com/asdotdev/react-list/compare/v0.5.15...v0.5.16) (2024-05-25)
 
 
