@@ -1,13 +1,14 @@
 name: Publish
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
-      - master
+      - "changelog-release-**"
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name == 'changelog-release-**' }}
+    if: ${{ github.event.pull_request.merged == true }}
 
     steps:
       - uses: actions/checkout@v4
