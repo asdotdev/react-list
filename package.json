@@ -20,6 +20,7 @@
   ],
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix .",
     "format:check": "prettier --check .",
