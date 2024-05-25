@@ -40,6 +40,7 @@ jobs:
           version-file: "./package.json,./package-lock.json,./config/app.json"
           git-branch: "changelog-release-${{ github.sha }}"
           skip-git-pull: true
+          skip-bump: true
 
       # create PR with release info
       - name: create PR with release info
