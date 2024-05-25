@@ -2,7 +2,7 @@ name: Publish
 on:
   push:
     paths:
-      - "config/app.json"
+      - "**/*.json"
 
 jobs:
   publish:
