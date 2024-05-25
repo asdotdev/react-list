@@ -9,7 +9,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_commit.message == 'Merge release info' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_commit.message == vars.RELEASE_SUBJECT }}
 
     steps:
       - uses: actions/checkout@v4
