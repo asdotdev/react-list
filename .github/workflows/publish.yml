@@ -1,18 +1,10 @@
 name: Publish
 on:
-  workflow_call:
-    inputs:
-      should-run:
-        required: true
-        type: boolean
-    secrets:
-      npm-token:
-        required: true
+  release:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: ${{ inputs.should-run }}
 
     steps:
       - uses: actions/checkout@v4
@@ -29,4 +21,4 @@ jobs:
       - name: publish package
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm-token }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
