@@ -1,12 +1,15 @@
 name: Publish
 on:
-  push:
-    paths:
-      - "**/*.json"
+  workflow_run:
+    workflows:
+      - Release
+    types:
+      - completed
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - uses: actions/checkout@v4
