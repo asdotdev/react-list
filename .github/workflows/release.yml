@@ -7,7 +7,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: ${{ github.ref_name != 'changelog-release-**' }}
 
     steps:
       # check out the repository with all releases
