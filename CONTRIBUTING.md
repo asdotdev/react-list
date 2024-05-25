@@ -220,17 +220,17 @@ npm link @asdotdev/react-list
 4.  Create a fresh new branch:
 
     ```
-    git checkout -b fix/update-guide-for-xyz
+    git checkout -b fix/resolve-xyz
     ```
 
-    > Your branch name should start with a fix/, feat/, docs/, etc. Avoid using issue numbers in branches. Keep them short, meaningful and unique.
+    > Your branch name should start with a fix/, feat/, docs/, chore/, etc. Avoid using issue numbers in branches. Keep them short, meaningful and unique.
     > Some examples of good branch names are:
 
     ```
-    fix/update-for-xyz
-    feat/add-xyz-feature
-    doc/udate-xyz-in-xyz-doc
-    chore/udate-xyz-in-xyz
+    fix/resolve-xyz
+    feat/add-xyz
+    docs/update-abc
+    chore/update-xyz
     ```
 
 5.  Edit pages and work on code in your favorite text editor.
@@ -262,7 +262,7 @@ npm link @asdotdev/react-list
     >
     > The `CHANGELOG.md` an`config/app.json` files are auto-generated, so don't make changes or commit them.
 
-10. Now, you can commit your changes with a short message like this `<type>([optional scope]): <description>`:
+10. Now, you can commit your changes with a short message structured as: `<type>[optional scope]: <description>`:
 
     ```
     git commit -m "fix: my short commit message"
@@ -271,26 +271,25 @@ npm link @asdotdev/react-list
     Some examples of conventional commit messages are:
 
     ```
-    fix: updated for xyz
-    feat: added xyz feature
-    docs: updated xyz in xyz doc
-    chore: updated xyz in xyz
+    fix: resolve xyz
+    feat: added xyz
+    docs(xyz): updated abc in xyz doc
+    chore: updated xyz
     ```
 
-    > You can learn more about why you should use conventional commits [here](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#why-use-conventional-commits).
+    > You can learn more about why you should use conventional commits [here](https://www.conventionalcommits.org/en/v1.0.0/#why-use-conventional-commits).
 
 ## Proposing a Pull Request (PR)
 
 1. Do not edit files directly through GitHub – while you can, it's not a good idea.
 
-2. Make sure the PR title is like this `<type>([optional scope]): <description>`.
+2. The PR title should structure similar to the commits as: `<type>[optional scope]: <description>`.
    | type | when to select |
    | -- | -- |
-   | fix | Changed or updated/improved functionality, etc. |
+   | fix | resolve bug, improved functionality, etc. |
    | feat | Only if you are adding new functionality, etc. |
    | docs | Changes to file like README or CONTRIBUTING, etc. |
    | chore | Changes that are not related to code or docs, etc. |
-   | refactor | Modification on existing codes, etc. |
 
    **description:** Keep it short (less than 30 characters) and simple; you can add more information and even screenshots in the PR description box and comments
 
