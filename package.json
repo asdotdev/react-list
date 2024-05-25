@@ -11,6 +11,7 @@
     "ui",
     "list",
     "react",
+    "react-ui",
     "react-list",
     "infinite-list",
     "infinite-scroll",
