@@ -1,4 +1,13 @@
-## 0.5.14 (2024-05-25)
+## [0.5.15](https://github.com/asdotdev/react-list/compare/v0.5.14...v0.5.15) (2024-05-25)
+
+
+### Bug Fixes
+
+* vars ([ca40ad1](https://github.com/asdotdev/react-list/commit/ca40ad161853363480ebe0a529bfc390f14ff2f4))
+
+
+
+## [0.5.14](https://github.com/asdotdev/react-list/compare/965c86c0c59fae28a601fee051fad9ff4ce487d6...v0.5.14) (2024-05-25)
 
 
 ### Bug Fixes
