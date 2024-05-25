@@ -8,6 +8,9 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
+    outputs:
+      skipped: ${{ steps.changelog.outputs.SKIPPED }}
+
     steps:
       # check out the repository with all releases
       - uses: actions/checkout@v4
@@ -66,3 +69,8 @@ jobs:
           tag: ${{ steps.changelog.outputs.tag }}
           name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+
+      # setting release outputs
+      - name: setting release outputs
+        id: set-outputs
+        run: echo "SKIPPED=${{steps.changelog.outputs.skipped}}" >> "$GITHUB_OUTPUT"
