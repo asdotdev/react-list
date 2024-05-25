@@ -7,7 +7,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == 'asdotdev/react-list' }}
 
     steps:
       # check out the repository with all releases

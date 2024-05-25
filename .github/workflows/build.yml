@@ -19,7 +19,9 @@ jobs:
         with:
           node-version: "18"
           cache: "npm"
+
       - name: install dependencies
         run: npm ci
+
       - name: run ${{ matrix.step }}
         run: npm run ${{ matrix.step }}
