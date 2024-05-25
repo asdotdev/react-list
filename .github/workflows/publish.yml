@@ -1,10 +1,8 @@
 name: Publish
 on:
   push:
-    branches:
-      - master
     paths:
-      - "app.json"
+      - "config/app.json"
 
 jobs:
   publish:
