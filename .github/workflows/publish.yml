@@ -1,9 +1,10 @@
 name: Publish
 on:
   pull_request:
-    types: [closed]
-    branches:
-      - "changelog-release-**"
+    types:
+      - closed
+    paths:
+      - "config/app.json"
 
 jobs:
   publish:
