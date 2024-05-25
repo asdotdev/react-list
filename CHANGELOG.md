@@ -1,3 +1,12 @@
+## [0.5.22](https://github.com/asdotdev/react-list/compare/v0.5.21...v0.5.22) (2024-05-25)
+
+
+### Bug Fixes
+
+* test ([849f81d](https://github.com/asdotdev/react-list/commit/849f81d573a38773602c81af68fb7364a017aeb4))
+
+
+
 ## [0.5.21](https://github.com/asdotdev/react-list/compare/v0.5.20...v0.5.21) (2024-05-25)
 
 
@@ -31,15 +40,6 @@
 ### Bug Fixes
 
 * test ([795738e](https://github.com/asdotdev/react-list/commit/795738e378fb2920dec4a0374c990ad3246beb2f))
-
-
-
-## [0.5.17](https://github.com/asdotdev/react-list/compare/v0.5.16...v0.5.17) (2024-05-25)
-
-
-### Bug Fixes
-
-* test ([fd3e73a](https://github.com/asdotdev/react-list/commit/fd3e73adb71dbb67cacda3ef869afa7653d35b75))
 
 
 
