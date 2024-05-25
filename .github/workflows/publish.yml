@@ -1,8 +1,10 @@
 name: Publish
 on:
-  pull_request:
+  push:
+    branches:
+      - master
     paths:
-      - "app.json"
+      - "**.json"
 
 jobs:
   publish:
