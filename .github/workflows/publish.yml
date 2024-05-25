@@ -29,11 +29,7 @@ jobs:
         run: npm run build
 
       - name: test
-        run: |
-          PR_MERGE_COMMIT=$(gh pr view ${{github.event.workflow_run.head_branch}} --json mergeCommit -q .mergeCommit)
-          echo "$PR_MERGE_COMMIT, ${{vars.RELEASE_SUBJECT}}" >> "$GITHUB_OUTPUT"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: echo "${{github.event.workflow_run.commit[0]}}, ${{vars.RELEASE_SUBJECT}}" >> "$GITHUB_OUTPUT"
 
       - name: publish package
         run: npm publish
