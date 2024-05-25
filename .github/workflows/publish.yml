@@ -32,6 +32,8 @@ jobs:
         run: |
           PR_MERGE_COMMIT=$(gh pr view "changelog-release-${{ github.sha }}" --json mergeCommit -q .mergeCommit)
           echo "$PR_MERGE_COMMIT, ${{vars.RELEASE_SUBJECT}}" >> "$GITHUB_OUTPUT"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: publish package
         run: npm publish
