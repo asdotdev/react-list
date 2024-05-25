@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: test
-        run: echo "${{github.event.workflow_run.head_commit.message == vars.RELEASE_SUBJECT}}" >> "$GITHUB_OUTPUT"
+        run: echo "${{github.event.workflow_run.head_commit.message}}" >> "$GITHUB_OUTPUT"
 
       - name: publish package
         run: npm publish
