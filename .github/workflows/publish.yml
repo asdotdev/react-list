@@ -29,7 +29,9 @@ jobs:
         run: npm run build
 
       - name: test
-        run: echo "${{github.event.workflow_run.head_commit.message}}, ${{vars.RELEASE_SUBJECT}}" >> "$GITHUB_OUTPUT"
+        run: |
+          PR_MERGE_COMMIT=$(gh pr view "changelog-release-${{ github.sha }}" --json mergeCommit -q .mergeCommit)
+          echo "$PR_MERGE_COMMIT, ${{vars.RELEASE_SUBJECT}}" >> "$GITHUB_OUTPUT"
 
       - name: publish package
         run: npm publish
